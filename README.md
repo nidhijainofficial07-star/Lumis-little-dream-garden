@@ -1,24 +1,69 @@
-# Pixel-Perfect Replica
+# 🌙 Lumi's Little Dream Garden
 
-Implement exactly the screenshot and nothing else
+*A magical little world where every dream deserves to shine.* ✨
 
-This project was built with [Lovable](https://lovable.dev).
+Welcome to **Lumi's Little Dream Garden**, an interactive, dreamy website featuring Lumi, a tiny cloud spirit who collects forgotten dreams and grows them into stars.
 
-## Build with Lovable
+## ✨ Features
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/97869b0c-011b-415e-b6b1-371aaef43d01).
+- ☁️ **Interactive 3D Lumi** — adorable expressions, touch reactions, and sound effects.
+- 📖 **Interactive Storybook** — explore magical stories.
+- 💌 **Dream Delivery** — follow a dream-filled journey with delightful interactions.
+- 🔦 **Nightlight Treasure Hunt** — discover hidden magical treasures.
+- 🌷 **Dream Guestbook** — share wishes and see new dreams appear.
+- 💬 **Talk to Lumi** — ask questions and interact with your cloud companion.
+- 🌙 **Night Mode** — enjoy a cozy nighttime experience.
+- 💖 **Returning Visitor Greetings** — Lumi welcomes dreamers back.
+- 🎵 **Cloud Sounds and Reactions** — add a little magic to your visit.
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## 🛠️ Built With
 
-## Development
+- React
+- TypeScript
+- Vite
+- TanStack Start
+- Three.js
+- Tailwind CSS
+- Supabase
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## 🚀 Run Locally
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+**Prerequisites:** Node.js and npm.
+
+1. Clone your repository:
+
+   ```bash
+   git clone YOUR_REPOSITORY_URL
+   ```
+
+2. Open the project directory:
+
+   ```bash
+   cd YOUR_PROJECT_DIRECTORY
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL shown in your terminal.
+
+## 🔐 Environment Variables
+
+If your local configuration uses Supabase, configure the required environment variables using your project's setup.
+
+**Never commit private keys, service-role keys, passwords, or `.env` files.**
+
+## 🎨 Created With Love
+
+Built for the **haX.baby Baby's First Website** hackathon.
+
+*Keep dreaming, little star. 💫*
