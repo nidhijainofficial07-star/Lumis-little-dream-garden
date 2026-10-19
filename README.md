@@ -33,13 +33,13 @@ Welcome to **Lumi's Little Dream Garden**, an interactive, dreamy website featur
 1. Clone your repository:
 
    ```bash
-   git clone YOUR_REPOSITORY_URL
+   git clone https://github.com/nidhijainofficial07-star/Lumis-little-dream-garden.git
    ```
 
 2. Open the project directory:
 
    ```bash
-   cd YOUR_PROJECT_DIRECTORY
+   cd lumis-little-dream-garden
    ```
 
 3. Install dependencies:
