@@ -1,0 +1,202 @@
+@keyframes lumi-boing { 0% { transform: scale(1) } 30% { transform: scale(1.12, .88) } 55% { transform: scale(.92, 1.1) rotate(-4deg) } 80% { transform: scale(1.04) rotate(2deg) } 100% { transform: scale(1) } }
+@keyframes lumi-spin { to { transform: rotate(360deg) scale(1) } }
+@keyframes confetti { 0% { transform: translate(0,0) scale(0); opacity: 1 } 100% { transform: translate(var(--dx), var(--dy)) scale(1) rotate(200deg); opacity: 0 } }
+@keyframes surprise-in { from { transform: translate(-50%, 20px) scale(.6); opacity: 0 } to { transform: translate(-50%, 0) scale(1); opacity: 1 } }
+
+.lumi-follow {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+.lumi-eyes {
+  transition: transform 0.12s ease-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+.lumi-boing { animation: lumi-boing .6s ease; transform-origin: 50% 70%; }
+.lumi-spin { animation: lumi-spin 1s ease-in-out; transform-origin: 50% 55%; }
+.lumi-antenna { cursor: pointer; outline: none; transform-box: fill-box; transform-origin: center; transition: transform .2s; }
+
+.lumi-antenna {
+  cursor: pointer;
+  outline: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.lumi-antenna:hover {
+  transform: scale(1.15) rotate(10deg);
+  filter: drop-shadow(0 0 8px #FFE69A);
+}
+
+.lumi-antenna:focus-visible {
+  filter: drop-shadow(0 0 8px #FFE69A);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lumi-antenna {
+    transition: none;
+  }
+}
+
+.lumi-antenna:focus-visible path { stroke-dasharray: 4 3; stroke-width: 4; }
+.lumi-confetti { position: absolute; left: 50%; top: 20%; pointer-events: none; animation: confetti 1.4s ease-out forwards; }
+.lumi-surprise { position: absolute; left: 50%; bottom: -1rem; animation: surprise-in .6s cubic-bezier(.3,1.6,.5,1) forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lumi-follow, .lumi-eyes { transition: none; transform: none !important; }
+}
+
+@keyframes lumi-breathe {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.018, 0.99);
+  }
+}
+
+.lumi-breathe {
+  animation: lumi-breathe 3.5s ease-in-out infinite;
+  transform-origin: 50% 65%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lumi-breathe {
+    animation: none;
+  }
+}
+
+@keyframes lumi-arrive {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.94);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.lumi-arrive {
+  animation: lumi-arrive 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lumi-arrive {
+    animation: none;
+  }
+}
+
+.lumi-dream-sparkles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.lumi-dream-sparkle {
+  position: absolute;
+  color: #FFE69A;
+  font-size: 1.15rem;
+  opacity: 0;
+  text-shadow: 0 0 8px rgba(255, 230, 154, 0.8);
+  animation: dream-sparkle-float 3.8s ease-in-out infinite;
+}
+
+@keyframes dream-sparkle-float {
+  0%, 100% {
+    opacity: 0.15;
+    transform: translateY(8px) scale(0.75) rotate(-10deg);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translateY(-10px) scale(1.15) rotate(12deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lumi-dream-sparkle {
+    animation: none;
+    opacity: 0.5;
+  }
+}
+
+.lumi-jar-glow {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: jar-dream-glow 2.4s ease-in-out infinite;
+}
+
+@keyframes jar-dream-glow {
+  0%, 100% {
+    opacity: 0.55;
+    filter: drop-shadow(0 0 2px #FFE69A);
+  }
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px #FFE69A);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lumi-jar-glow {
+    animation: none;
+    opacity: 0.8;
+  }
+}
+.anim-wish-float {
+  animation: wish-float-in 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes wish-float-in {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.92);
+  }
+  65% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-wish-float {
+    animation: none;
+  }
+}
+
+.anim-wish-jar {
+  transform-origin: 50% 80%;
+  animation: wish-jar-bounce 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@keyframes wish-jar-bounce {
+  0% {
+    transform: scale(1) rotate(0);
+  }
+  35% {
+    transform: scale(1.08, 0.92) rotate(-4deg);
+  }
+  65% {
+    transform: scale(0.96, 1.05) rotate(3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-wish-jar {
+    animation: none;
+  }
+}

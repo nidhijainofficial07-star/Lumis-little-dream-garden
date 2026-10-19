@@ -1,0 +1,58 @@
+/* Nighttime garden theme — toggled by .night on <html> */
+html.night {
+  --background: oklch(0.24 0.05 290);
+  --foreground: oklch(0.96 0.02 85);
+  --card: oklch(0.3 0.06 290 / 0.8);
+  --card-foreground: var(--foreground);
+  --muted-foreground: oklch(0.85 0.04 290);
+  --gradient-sky: linear-gradient(180deg, oklch(0.18 0.05 280) 0%, oklch(0.3 0.08 290) 55%, var(--background) 100%);
+  --shadow-sticker: 4px 4px 0 oklch(0.12 0.03 290);
+  --shadow-soft: 0 0 40px -10px color-mix(in oklab, var(--butter) 40%, transparent);
+  color-scheme: dark;
+}
+html { transition: background-color .6s ease; }
+body, .bg-sky { transition: background .6s ease, color .6s ease; }
+
+/* stickers stay paper-like and readable */
+.sticker { color: var(--plum); }
+
+.night .night-glow { filter: drop-shadow(0 0 10px var(--butter)); }
+.day-only, .night-only { transition: opacity .8s ease, transform .8s ease; }
+.night-only { opacity: 0; transform: translateY(20px); }
+.night .night-only { opacity: 1; transform: none; }
+.night .day-only { opacity: 0; transform: translateY(-20px); }
+.night .anim-twinkle { color: var(--butter); }
+.night .hero-name { color: var(--butter); }
+
+/* Lumi's Dream Guestbook — Night Mode text colors */
+html.night .dream-guestbook .guestbook-heading,
+html.night .dream-guestbook .guestbook-heading p,
+html.night .dream-guestbook .guestbook-heading h2,
+html.night .dream-guestbook .guestbook-heading h3,
+html.night .dream-guestbook .guestbook-description {
+  color: #ffffff !important;
+}
+
+html.night .dream-guestbook .guestbook-label {
+  color: #ffb6d9 !important;
+}
+
+/* Guestbook text colors in Day Mode */
+html:not(.night) .dream-guestbook .guestbook-heading,
+html:not(.night) .dream-guestbook .guestbook-description {
+  color: #493858;
+}
+
+html:not(.night) .dream-guestbook .guestbook-label {
+  color: #7e22ce;
+}
+
+
+/* Make Dream Guestbook wishes readable at night */
+html.night .dream-guestbook article .guestbook-description {
+  color: #3b2458 !important;
+}
+
+html.night .dream-guestbook article .guestbook-label {
+  color: #4c286b !important;
+}
