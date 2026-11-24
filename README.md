@@ -1,24 +1,49 @@
-# Pixel-Perfect Replica
+# Lumi's Little Dream Garden
 
-Implement exactly the screenshot and nothing else
+A magical, interactive storybook experience featuring Lumi, a tiny cloud-spirit who collects forgotten dreams and grows them into stars.
 
-This project was built with [Lovable](https://lovable.dev).
+## Features
 
-## Build with Lovable
+- Interactive homepage and navigation
+- Lumi greeting and mascot
+- Story section and story library
+- Dream delivery experience
+- Creative content gallery
+- Dream explorer
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/97869b0c-011b-415e-b6b1-371aaef43d01).
+## Technologies Used
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- React
+- TypeScript
+- TanStack Start
+- Tailwind CSS
+- Vite
 
 ## Development
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### Prerequisites
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+- Node.js
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run the development server
+
+```bash
 npm run dev
 ```
+
+### Build for production
+
+```bash
+npm run build
+```
+
+## Project Description
+
+Lumi's Little Dream Garden is a magical digital experience designed to bring imagination, creativity, and storytelling together in a beautiful interactive environment.
